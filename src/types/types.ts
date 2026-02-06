@@ -24,36 +24,32 @@ export interface WeatherData {
   };
 
   forecast: {
-    forecastday: [
-      {
-        date_epoch: number;
-        day: {
-          maxtemp_f: number;
-          mintemp_f: number;
-          condition: {
-            text: string;
-            icon: string;
-            code: number;
-          };
+    forecastday: Array<{
+      date_epoch: number;
+      day: {
+        maxtemp_f: number;
+        mintemp_f: number;
+        condition: {
+          text: string;
+          icon: string;
+          code: number;
         };
-        hour: [
-          {
-            time_epoch: number;
-            time: string;
-            temp_f: number;
-            condition: {
-              text: string;
-              icon: string;
-              code: number;
-            };
-            humidity: number;
-            cloud: number;
-            feelslike_f: number;
-            windchill_f: number;
-          },
-        ];
-      },
-    ];
+      };
+      hour: Array<{
+        time_epoch: number;
+        time: string;
+        temp_f: number;
+        condition: {
+          text: string;
+          icon: string;
+          code: number;
+        };
+        humidity: number;
+        cloud: number;
+        feelslike_f: number;
+        windchill_f: number;
+      }>;
+    }>;
   };
 }
 
