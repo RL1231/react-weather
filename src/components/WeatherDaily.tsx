@@ -15,15 +15,15 @@ export default function WeatherDaily() {
       <ul>
         {forecast?.forecastday.map((d, index) => (
           <li key={index} className="flex min-w-65 flex-row space-x-1">
-            <div className="my-auto">
+            <div className="my-auto min-w-15.5 text-left">
               {index === 0
                 ? 'Today'
                 : `${new Date(d.date_epoch * 1000).toLocaleDateString(undefined, { weekday: 'long' })}`}
             </div>
             <div>
-              <img src={d.day.condition.icon} className="h-8 w-8" />
+              <img src={d.day.condition.icon} className="ml-4 h-8 w-8" />
             </div>
-            <div className="my-auto ml-auto flex flex-row space-x-2">
+            <div className="my-auto ml-auto flex min-w-28.5 flex-row space-x-2">
               <div>L: {d.day.mintemp_f}°</div>
               <div>H: {d.day.maxtemp_f}°</div>
             </div>

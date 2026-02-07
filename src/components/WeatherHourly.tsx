@@ -5,9 +5,15 @@ import 'swiper/css';
 export default function WeatherHourly() {
   const { weatherData } = useWeatherStore();
   const hours = weatherData?.forecast?.forecastday?.[0]?.hour ?? [];
+  const baseEpoch = weatherData?.location?.localtime_epoch ?? 0;
+  const currentHourEpoch = baseEpoch - (baseEpoch % 3600);
+  const visibleHours = hours.filter(
+    (hour) => hour.time_epoch >= currentHourEpoch,
+  );
+  const displayHours = visibleHours.length > 0 ? visibleHours : hours;
 
   return (
-    <div className="my-4 w-full max-w-full overflow-x-hidden">
+    <div className="my-4 w-full max-w-full overflow-x-hidden rounded border-2 border-neutral-300 py-4">
       <Swiper
         className="w-75"
         spaceBetween={1}
@@ -19,9 +25,9 @@ export default function WeatherHourly() {
           0: { slidesPerView: 4 },
         }}
       >
-        {hours.map((hour) => (
+        {displayHours.map((hour) => (
           <SwiperSlide key={hour.time_epoch}>
-            <div className="flex w-[64px] flex-col text-center">
+            <div className="flex w-16 flex-col text-center">
               <div>
                 {new Date(hour.time).toLocaleTimeString([], {
                   hour: 'numeric',
