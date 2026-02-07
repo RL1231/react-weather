@@ -8,10 +8,8 @@ export default function WeatherDaily() {
     return <div>Loading...</div>;
   }
   return (
-    <div className="my-4 flex flex-col rounded border-2 border-neutral-300 p-4">
-      <h1 className="mr-auto mb-4 flex font-semibold uppercase">
-        3-Day Forecast
-      </h1>
+    <div className="mt-4 mb-12 flex flex-col rounded border-2 border-white p-4 font-semibold md:text-2xl">
+      <h1 className="mr-auto mb-4 flex uppercase">3-Day Forecast</h1>
       <ul>
         {forecast?.forecastday.map((d, index) => (
           <li key={index} className="flex min-w-65 flex-row space-x-1">
@@ -24,8 +22,8 @@ export default function WeatherDaily() {
               <img src={d.day.condition.icon} className="ml-4 h-8 w-8" />
             </div>
             <div className="my-auto ml-auto flex min-w-28.5 flex-row space-x-2">
-              <div>L: {d.day.mintemp_f}°</div>
-              <div>H: {d.day.maxtemp_f}°</div>
+              <div className="min-w-14">L: {d.day.mintemp_f}°</div>
+              <div className="min-w-14">H: {d.day.maxtemp_f}°</div>
             </div>
           </li>
         ))}

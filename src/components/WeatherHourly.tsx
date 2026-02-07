@@ -13,7 +13,7 @@ export default function WeatherHourly() {
   const displayHours = visibleHours.length > 0 ? visibleHours : hours;
 
   return (
-    <div className="my-4 w-full max-w-full overflow-x-hidden rounded border-2 border-neutral-300 py-4">
+    <div className="my-4 w-full max-w-full overflow-x-hidden rounded border-2 border-white py-4 md:p-8">
       <Swiper
         className="w-75"
         spaceBetween={1}
@@ -27,7 +27,7 @@ export default function WeatherHourly() {
       >
         {displayHours.map((hour) => (
           <SwiperSlide key={hour.time_epoch}>
-            <div className="flex w-16 flex-col text-center">
+            <div className="flex w-16 flex-col text-center font-semibold md:w-24 md:text-2xl">
               <div>
                 {new Date(hour.time).toLocaleTimeString([], {
                   hour: 'numeric',

@@ -9,13 +9,13 @@ export default function WeatherCurrent() {
 
   if (!current) return <div>No current weather data available</div>;
   return (
-    <div>
-      <div className="text-2xl font-semibold">{location?.name}</div>
-      <div className="text-4xl">{Math.round(current?.temp_f ?? 0)}°</div>
-      <div className="text-sm font-semibold">
+    <div className="mb-12 landscape:mt-8 landscape:mb-8">
+      <div className="text-4xl font-semibold">{location?.name}</div>
+      <div className="mb-2 text-6xl">{Math.round(current?.temp_f ?? 0)}°</div>
+      <div className="text-md font-semibold">
         Feels Like: {Math.round(current?.feelslike_f ?? 0)}°
       </div>
-      <div className="flex flex-row items-center justify-center space-x-2 text-sm font-semibold">
+      <div className="text-md flex flex-row items-center justify-center space-x-2 font-semibold">
         <div>H:{Math.round(forecast?.forecastday[0].day.maxtemp_f ?? 0)}°</div>
         <div>L:{Math.round(forecast?.forecastday[0].day.mintemp_f ?? 0)}°</div>
       </div>

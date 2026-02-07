@@ -23,8 +23,8 @@ export default function WeatherMobileSearch() {
     <>
       <Dialog.Root open={open} onOpenChange={setOpen}>
         <Dialog.Trigger asChild>
-          <button className="fixed right-4 bottom-4 rounded-full bg-blue-500 p-4">
-            <Search className="text-white" />
+          <button className="fixed right-4 bottom-4 rounded-full bg-white p-4 md:right-8 md:bottom-8 lg:hidden">
+            <Search className="text-blue-400" />
           </button>
         </Dialog.Trigger>
         <Dialog.Portal>
