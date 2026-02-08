@@ -7,13 +7,17 @@ import './App.css';
 
 function App() {
   return (
-    <>
-      <WeatherCurrent />
-      <WeatherHourly />
-      <WeatherDaily />
-      <WeatherSearch />
+    <div className="md:min-w-120 xl:flex xl:flex-row xl:items-start xl:gap-12">
+      <div className="w-full xl:w-1/2">
+        <WeatherCurrent />
+        <WeatherSearch />
+      </div>
+      <div className="w-full xl:w-1/2">
+        <WeatherHourly />
+        <WeatherDaily />
+      </div>
       <WeatherMobileSearch />
-    </>
+    </div>
   );
 }
 

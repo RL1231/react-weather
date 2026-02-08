@@ -23,7 +23,7 @@ export default function WeatherMobileSearch() {
     <>
       <Dialog.Root open={open} onOpenChange={setOpen}>
         <Dialog.Trigger asChild>
-          <button className="fixed right-4 bottom-4 rounded-full bg-white p-4 md:right-8 md:bottom-8 lg:hidden">
+          <button className="fixed right-4 bottom-4 rounded-full bg-white p-4 md:right-8 md:bottom-8 xl:hidden">
             <Search className="text-blue-400" />
           </button>
         </Dialog.Trigger>
@@ -37,10 +37,11 @@ export default function WeatherMobileSearch() {
               className="flex min-w-75 flex-col gap-2"
             >
               <input
+                id="city"
                 type="text"
                 value={query}
                 placeholder="Enter city"
-                className="w-full rounded border p-2 text-xl"
+                className="w-full rounded border p-2 text-xl text-black"
                 onChange={(e) => setQuery(e.target.value)}
               />
               <button

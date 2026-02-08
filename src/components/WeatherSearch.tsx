@@ -18,7 +18,7 @@ export default function WeatherSearch() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="fixed right-0 bottom-0 left-0 hidden items-center justify-center space-x-3 p-4 lg:flex lg:flex-row"
+      className="hidden items-center justify-center space-x-3 p-4 xl:flex xl:flex-row"
     >
       <input
         name="query"

@@ -13,21 +13,23 @@ export default function WeatherHourly() {
   const displayHours = visibleHours.length > 0 ? visibleHours : hours;
 
   return (
-    <div className="my-4 w-full max-w-full overflow-x-hidden rounded border-2 border-white py-4 md:p-8">
+    <div className="my-4 w-full max-w-full overflow-x-hidden rounded border-2 border-white py-4 md:px-4 lg:mb-8 lg:border-4 lg:py-8">
       <Swiper
-        className="w-75"
+        className="w-75 md:w-120 lg:h-40 lg:w-160"
         spaceBetween={1}
-        slidesPerView={4}
         breakpoints={{
-          1024: { slidesPerView: 4 },
-          768: { slidesPerView: 4 },
+          1024: { slidesPerView: 6 },
+          768: { slidesPerView: 6 },
           480: { slidesPerView: 4 },
           0: { slidesPerView: 4 },
         }}
       >
         {displayHours.map((hour) => (
-          <SwiperSlide key={hour.time_epoch}>
-            <div className="flex w-16 flex-col text-center font-semibold md:w-24 md:text-2xl">
+          <SwiperSlide
+            key={hour.time_epoch}
+            className="flex min-w-12 md:min-w-18"
+          >
+            <div className="flex w-full flex-col text-center font-semibold md:text-2xl lg:text-3xl">
               <div>
                 {new Date(hour.time).toLocaleTimeString([], {
                   hour: 'numeric',
@@ -37,7 +39,7 @@ export default function WeatherHourly() {
                 <img
                   src={hour.condition.icon}
                   alt={hour.condition.text}
-                  className="mx-auto h-10 w-10"
+                  className="mx-auto h-10 w-10 md:h-14 md:w-14 lg:my-2 lg:h-16 lg:w-16"
                 />
               </div>
               <div>{Math.round(hour.temp_f)}°</div>
