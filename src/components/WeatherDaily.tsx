@@ -24,11 +24,11 @@ export default function WeatherDaily() {
                 className="ml-4 h-8 w-8 md:h-12 md:w-12"
               />
             </div>
-            <div className="my-auto ml-auto flex min-w-28.5 flex-row space-x-2">
-              <div className="min-w-14 md:min-w-21.5">
+            <div className="my-auto ml-auto flex min-w-28.5 flex-row space-x-2 lg:min-w-65">
+              <div className="ml-0 flex min-w-14 md:min-w-21.5 lg:min-w-32.5">
                 L: {d.day.mintemp_f}°
               </div>
-              <div className="min-w-14 md:min-w-21.5">
+              <div className="mr-0 flex min-w-14 md:min-w-21.5 lg:min-w-32.5">
                 H: {d.day.maxtemp_f}°
               </div>
             </div>
