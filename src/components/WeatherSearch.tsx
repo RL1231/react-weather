@@ -23,7 +23,7 @@ export default function WeatherSearch() {
       <input
         name="query"
         placeholder="Enter a city or location"
-        className="rounded border border-neutral-300 p-1"
+        className="rounded border border-neutral-300 p-1 focus:border-neutral-300 focus:ring-0 focus:outline-none"
       />
       <button
         type="submit"

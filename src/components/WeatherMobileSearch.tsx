@@ -34,19 +34,19 @@ export default function WeatherMobileSearch() {
             <Dialog.Description aria-describedby="Search for a city" />
             <form
               onSubmit={handleSubmit}
-              className="flex min-w-75 flex-col gap-2"
+              className="flex min-w-75 flex-col gap-2 md:p-4"
             >
               <input
                 id="city"
                 type="text"
                 value={query}
-                placeholder="Enter city"
-                className="w-full rounded border p-2 text-xl text-black"
+                placeholder="Enter city or location"
+                className="w-full rounded border border-neutral-300 p-2 text-xl text-black focus:border-neutral-300 focus:ring-0 focus:outline-none md:mb-4 md:text-2xl"
                 onChange={(e) => setQuery(e.target.value)}
               />
               <button
                 type="submit"
-                className="ml-auto rounded bg-blue-500 p-2 text-xl font-semibold text-white"
+                className="ml-auto rounded bg-blue-500 p-2 text-xl font-semibold text-white md:px-4 md:py-2 md:text-2xl"
               >
                 Search
               </button>
