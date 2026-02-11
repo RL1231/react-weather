@@ -9,11 +9,11 @@ function App() {
   return (
     <>
       <div className="md:min-w-120 xl:flex xl:flex-row xl:items-start xl:gap-12">
-        <div className="w-full xl:my-auto xl:w-1/2">
+        <div className="max-w-[300px] md:mb-[60px] md:max-w-[540px] xl:mt-6 xl:mr-22.5 xl:w-1/2 landscape:mb-[30px] landscape:max-w-[420px] md:landscape:mb-[90px] md:landscape:max-w-[720px]">
           <WeatherCurrent />
           <WeatherSearch />
         </div>
-        <div className="w-full xl:w-1/2">
+        <div className="max-w-[300px] md:max-w-[540px] xl:w-1/2 landscape:max-w-[420px] md:landscape:max-w-[720px]">
           <WeatherHourly />
           <WeatherDaily />
         </div>

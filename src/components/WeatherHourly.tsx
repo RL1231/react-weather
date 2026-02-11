@@ -13,12 +13,11 @@ export default function WeatherHourly() {
   const displayHours = visibleHours.length > 0 ? visibleHours : hours;
 
   return (
-    <div className="my-4 w-full max-w-full overflow-x-hidden rounded border-2 border-white py-4 md:px-4 lg:mb-8 lg:border-4 lg:py-8 xl:border-2 xl:py-4">
+    <div className="my-4 overflow-x-hidden rounded border-2 border-white py-4 md:px-4 lg:mb-8 lg:border-4 lg:py-8 xl:max-w-120 xl:border-2 xl:py-4">
       <Swiper
-        className="w-75 md:w-120 lg:h-40 lg:w-160 xl:w-90"
         spaceBetween={1}
         breakpoints={{
-          1024: { slidesPerView: 6 },
+          1024: { slidesPerView: 5 },
           768: { slidesPerView: 6 },
           480: { slidesPerView: 4 },
           0: { slidesPerView: 4 },
