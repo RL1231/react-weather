@@ -9,7 +9,7 @@ export default function WeatherCurrent() {
 
   if (!current) return <div>No current weather data available</div>;
   return (
-    <div className="md:mt-16 xl:mt-0 landscape:mt-8">
+    <div className="md:mt-16 xl:mt-0 landscape:mt-8 lg:landscape:w-148.5">
       <div className="text-4xl font-semibold md:mb-4 md:text-6xl xl:text-4xl md:landscape:mt-16">
         {location?.name}
       </div>

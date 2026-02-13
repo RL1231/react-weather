@@ -8,11 +8,11 @@ export default function WeatherDaily() {
     return <div className="flex">Loading...</div>;
   }
   return (
-    <div className="rounded border-2 border-white p-4 font-semibold md:px-8 xl:border-2 md:landscape:border-4 md:landscape:px-12 md:landscape:py-8">
-      <h1 className="mr-auto mb-4 flex text-lg md:mb-8 md:text-3xl md:landscape:text-4xl">
+    <div className="desktop:border-0 rounded border-2 border-white p-4 font-semibold md:px-8 md:landscape:border-4 md:landscape:px-12 md:landscape:py-8 lg:landscape:border-2 lg:landscape:p-4">
+      <h1 className="mr-auto mb-4 flex text-lg md:mb-8 md:text-3xl xl:text-2xl md:landscape:text-4xl lg:landscape:text-2xl">
         3-Day Forecast
       </h1>
-      <ul className="md:text-2xl md:landscape:text-3xl">
+      <ul className="md:text-2xl xl:text-2xl md:landscape:text-3xl lg:landscape:text-xl">
         {forecast?.forecastday.map((d, index) => (
           <li key={index} className="flex flex-row">
             <div className="my-auto flex min-w-18 justify-start md:min-w-25 md:landscape:min-w-32">
