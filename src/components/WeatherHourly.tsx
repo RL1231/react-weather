@@ -13,7 +13,7 @@ export default function WeatherHourly() {
   const displayHours = visibleHours.length > 0 ? visibleHours : hours;
 
   return (
-    <div className="my-4 overflow-x-hidden rounded border-2 border-white py-4 md:px-4 lg:mb-8 lg:border-4 lg:py-8 xl:max-w-120 xl:border-2 xl:py-4">
+    <div className="my-4 overflow-x-hidden rounded border-2 border-white py-4 md:px-4 lg:mb-8 lg:py-8 xl:border-2 md:landscape:border-4">
       <Swiper
         spaceBetween={1}
         breakpoints={{
@@ -28,7 +28,7 @@ export default function WeatherHourly() {
             key={hour.time_epoch}
             className="flex min-w-12 md:min-w-18"
           >
-            <div className="flex w-full flex-col text-center font-semibold md:text-2xl lg:text-3xl xl:text-lg">
+            <div className="flex w-full flex-col text-center font-semibold md:text-2xl lg:text-3xl">
               <div>
                 {new Date(hour.time).toLocaleTimeString([], {
                   hour: 'numeric',

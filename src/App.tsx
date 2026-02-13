@@ -8,18 +8,18 @@ import './App.css';
 function App() {
   return (
     <>
-      <div className="md:min-w-120 xl:flex xl:flex-row xl:items-start xl:gap-12">
-        <div className="max-w-[300px] md:mb-[60px] md:max-w-[540px] xl:mt-6 xl:mr-22.5 xl:w-1/2 landscape:mb-[30px] landscape:max-w-[420px] md:landscape:mb-[90px] md:landscape:max-w-[720px]">
+      <div className="md:min-w-120 xl:flex xl:flex-row">
+        <div className="max-w-75 md:mb-15 md:max-w-135 xl:mt-24 xl:w-1/2 landscape:mb-7.5 landscape:max-w-105 md:landscape:mb-12 md:landscape:max-w-180">
           <WeatherCurrent />
           <WeatherSearch />
         </div>
-        <div className="max-w-[300px] md:max-w-[540px] xl:w-1/2 landscape:max-w-[420px] md:landscape:max-w-[720px]">
+        <div className="max-w-75 md:max-w-135 xl:w-1/2 landscape:max-w-105 md:landscape:max-w-180">
           <WeatherHourly />
           <WeatherDaily />
         </div>
         <WeatherMobileSearch />
       </div>
-      <div className="mt-15 text-xs landscape:mb-5">
+      <div className="md:text-md mt-16 text-xs md:mt-30 landscape:my-8 md:landscape:my-15 md:landscape:text-lg">
         Powered by{' '}
         <a
           href="https://www.weatherapi.com/"
